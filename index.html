@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kamal Kant Gautam — ECE Student · Developer · Builder</title>
+  <meta name="description" content="Kamal Kant Gautam — Electronics and Communication student at SLIET, developer, hardware builder and hackathon winner."/>
+  <meta name="theme-color" content="#171918"/>
+  <script>try{const savedTheme=localStorage.getItem("kkg-theme");if(savedTheme==="light"||savedTheme==="dark")document.documentElement.dataset.theme=savedTheme;}catch(error){}</script>
+  <meta property="og:title" content="Kamal Kant Gautam — ECE Student · Builder"/>
+  <meta property="og:description" content="A portfolio of projects across electronics, software, product thinking and hackathons."/>
+  <meta property="og:type" content="website"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- ░░ CURSOR ░░ -->
+<div class="cur-dot" id="curDot"></div>
+<div class="cur-ring" id="curRing"></div>
+
+<!-- ░░ PENDANT LAMP ░░ -->
+<div class="lamp" id="lamp" title="Toggle light">
+  <div class="lamp-cord"></div>
+  <button class="lamp-shade" id="lampBtn" type="button" aria-label="Switch to light theme" aria-pressed="false" title="Switch theme"></button>
+  <div class="lamp-glow-cone" id="lampCone"></div>
+</div>
+
+<!-- ░░ HEADER ░░ -->
+<header class="hdr" id="hdr">
+  <a href="#hero" class="hdr-logo">Kamal</a>
+  <nav class="hdr-nav" id="hdrNav">
+    <a href="#hero"     class="hn">Home</a>
+    <a href="#projects" class="hn">Projects</a>
+    <a href="#about"    class="hn">About</a>
+    <a href="#skills"   class="hn">Skills</a>
+    <a href="#wins"     class="hn">Wins</a>
+    <a href="#journey"  class="hn">Journey</a>
+    <a href="#contact"  class="hn">Contact</a>
+  </nav>
+  <div class="hdr-time">
+    <span class="ht-label">Local time</span>
+    <strong class="ht-val" id="hdrTime">--:--</strong>
+    <span class="ht-sep">·</span>
+    <span class="ht-date" id="hdrDate">--</span>
+  </div>
+  <button class="mob-toggle" id="mobToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ════════════════════════════════════
+     SECTION 01 — HERO
+════════════════════════════════════ -->
+<main id="main-content">
+<section class="hero" id="hero">
+
+  <div class="hero-left">
+    <p class="hero-tag"><span class="tag-dot"></span> ECE Student · Builder · 2026</p>
+
+    <h1 class="hero-name">Hi, I'm Kamal.</h1>
+
+    <p class="hero-iam">I am a</p>
+
+    <!-- NOTEPAD FLIPPER -->
+    <div class="notepad">
+      <div class="notepad-rings">
+        <span class="nr"></span><span class="nr"></span><span class="nr"></span>
+        <span class="nr"></span><span class="nr"></span><span class="nr"></span>
+        <span class="nr"></span><span class="nr"></span><span class="nr"></span>
+        <span class="nr"></span><span class="nr"></span><span class="nr"></span>
+        <span class="nr"></span><span class="nr"></span>
+      </div>
+      <div class="notepad-body">
+        <div class="notepad-slides" id="notepadSlides">
+          <div class="np-slide active">ECE Student</div>
+          <div class="np-slide">Developer</div>
+          <div class="np-slide">Builder</div>
+          <div class="np-slide">Hackathon Winner</div>
+          <div class="np-slide">Problem Solver</div>
+        </div>
+        <span class="notepad-counter" id="notepadCounter">01 / 05</span>
+      </div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#contact" class="cta-primary">
+        Start a project
+        <span class="cta-arrow">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!-- Interactive KKG identity card -->
+    <div class="hero-photo-frame">
+      <div class="photo-inner" id="identityCard" role="button" tabindex="0"
+           aria-label="KKG identity card. Activate to discover more."
+           aria-pressed="false">
+        <div class="identity-face identity-front">
+          <span class="identity-kicker"><i></i> PERSONAL PORTFOLIO</span>
+          <img class="identity-portrait" src="assets/kamal-photo.jpg" alt="Kamal Kant Gautam at a hackathon event" decoding="async" fetchpriority="high"/>
+          <span class="photo-initials">KKG</span>
+          <span class="identity-caption">Curious mind. Constant builder.</span>
+          <span class="identity-orbit orbit-one"></span>
+          <span class="identity-orbit orbit-two"></span>
+          <span class="identity-flip-hint">TAP TO DISCOVER <b>↗</b></span>
+        </div>
+        <div class="identity-face identity-back">
+          <span class="identity-kicker"><i></i> A LITTLE ABOUT ME</span>
+          <h3>Hey, I'm Kamal.</h3>
+          <p>An ECE student who enjoys bringing ideas to life through code, electronics and thoughtful design.</p>
+          <div class="identity-tags"><span>Electronics</span><span>Web</span><span>Building</span></div>
+          <span class="identity-flip-hint">BACK TO FRONT <b>↶</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-bar">
+    <span>AVAILABLE FOR WORK</span>
+    <span>REMOTE-FIRST, WORLDWIDE</span>
+    <a href="#doors" class="scroll-cta">SCROLL TO EXPLORE ↓</a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SECTION 02 — MAGIC DOORS
+════════════════════════════════════ -->
+<section class="doors-section" id="doors">
+  <h2 class="doors-heading">Magic happens behind the doors</h2>
+
+  <div class="doors-row" id="doorsRow">
+
+    <!-- DOOR 1: Web Developer -->
+    <div class="door-unit" data-idx="0" role="button" tabindex="0" aria-expanded="false" aria-label="Open door 0 for more information">
+      <div class="door-surround">
+        <div class="door-scene-wrap">
+          <div class="door-scene">
+            <div class="door-room">
+              <div class="room-content">
+                <span class="room-num">01</span>
+                <h3>Web &amp; Frontend</h3>
+                <p>Designing and developing responsive interfaces, portfolio experiences and web prototypes.</p>
+                <ul class="room-list">
+                  <li>Namma Space</li>
+                  <li>Because Credit Matters</li>
+                  <li>Kamal Portfolio</li>
+                </ul>
+                <div class="room-stack">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+                </div>
+              </div>
+            </div>
+            <div class="door-panel" style="--dc:#243560">
+              <div class="door-nameplate">WEB<br>DEVELOPER</div>
+              <div class="door-handle"><div class="door-knob"></div><div class="door-keyhole"></div></div>
+            </div>
+            <div class="door-mask"></div>
+          </div>
+        </div>
+        <div class="door-shadow"></div>
+      </div>
+    </div>
+
+    <!-- DOOR 2: App Developer -->
+    <div class="door-unit" data-idx="1" role="button" tabindex="0" aria-expanded="false" aria-label="Open door 1 for more information">
+      <div class="door-surround">
+        <div class="door-scene-wrap">
+          <div class="door-scene">
+            <div class="door-room">
+              <div class="room-content">
+                <span class="room-num">02</span>
+                <h3>Product Building</h3>
+                <p>Turning problem statements into useful product concepts, prototypes and clear user experiences.</p>
+                <ul class="room-list">
+                  <li>KisanSetu</li>
+                  <li>VisiDrop App</li>
+                  <li>Because Credit Matters</li>
+                </ul>
+                <div class="room-stack">
+                  <span>Prototyping</span><span>UI Design</span><span>APIs</span>
+                </div>
+              </div>
+            </div>
+            <div class="door-panel" style="--dc:#3d2050">
+              <div class="door-nameplate">APP<br>DEVELOPER</div>
+              <div class="door-handle"><div class="door-knob"></div><div class="door-keyhole"></div></div>
+            </div>
+            <div class="door-mask"></div>
+          </div>
+        </div>
+        <div class="door-shadow"></div>
+      </div>
+    </div>
+
+    <!-- DOOR 3: ECE Engineer -->
+    <div class="door-unit" data-idx="2" role="button" tabindex="0" aria-expanded="false" aria-label="Open door 2 for more information">
+      <div class="door-surround">
+        <div class="door-scene-wrap">
+          <div class="door-scene">
+            <div class="door-room">
+              <div class="room-content">
+                <span class="room-num">03</span>
+                <h3>ECE &amp; Embedded</h3>
+                <p>Exploring the connection between circuits and code through microcontrollers, sensors and practical prototypes.</p>
+                <ul class="room-list">
+                  <li>VisiDrop IoT Device</li>
+                  <li>ESP8266 &amp; Arduino Builds</li>
+                  <li>Circuit Design</li>
+                </ul>
+                <div class="room-stack">
+                  <span>C / C++</span><span>Arduino</span><span>ESP8266</span><span>Sensors</span>
+                </div>
+              </div>
+            </div>
+            <div class="door-panel" style="--dc:#2c4a3c">
+              <div class="door-nameplate">ECE<br>ENGINEER</div>
+              <div class="door-handle"><div class="door-knob"></div><div class="door-keyhole"></div></div>
+            </div>
+            <div class="door-mask"></div>
+          </div>
+        </div>
+        <div class="door-shadow"></div>
+      </div>
+    </div>
+
+    <!-- DOOR 4: AI & DSA -->
+    <div class="door-unit" data-idx="3" role="button" tabindex="0" aria-expanded="false" aria-label="Open door 3 for more information">
+      <div class="door-surround">
+        <div class="door-scene-wrap">
+          <div class="door-scene">
+            <div class="door-room">
+              <div class="room-content">
+                <span class="room-num">04</span>
+                <h3>AI, UX &amp; Problem Solving</h3>
+                <p>Exploring AI-assisted workflows, interaction design and the small details that make digital products easier to use.</p>
+                <ul class="room-list">
+                  <li>Bad UI — 8-level UX challenge</li>
+                  <li>AI API Experiments</li>
+                  <li>Gemini API Integration</li>
+                </ul>
+                <div class="room-stack">
+                  <span>C++</span><span>DSA</span><span>UX</span><span>AI APIs</span>
+                </div>
+              </div>
+            </div>
+            <div class="door-panel" style="--dc:#7a3d1c">
+              <div class="door-nameplate">AI &amp;<br>UX</div>
+              <div class="door-handle"><div class="door-knob"></div><div class="door-keyhole"></div></div>
+            </div>
+            <div class="door-mask"></div>
+          </div>
+        </div>
+        <div class="door-shadow"></div>
+      </div>
+    </div>
+
+    <!-- DOOR 5: Hackathons -->
+    <div class="door-unit" data-idx="4" role="button" tabindex="0" aria-expanded="false" aria-label="Open door 4 for more information">
+      <div class="door-surround">
+        <div class="door-scene-wrap">
+          <div class="door-scene">
+            <div class="door-room">
+              <div class="room-content">
+                <span class="room-num">05</span>
+                <h3>Hackathons &amp; Leadership</h3>
+                <p>Collaborating, presenting ideas and leading teams through fast-paced innovation challenges.</p>
+                <ul class="room-list">
+                  <li>Plaksha Prayas — 3rd Prize</li>
+                  <li>SSDC Hivemind — Winner</li>
+                  <li>SLIET Inventia — 1st Prize</li>
+                </ul>
+                <div class="room-stack">
+                  <span>Team Lead</span><span>Pitching</span><span>Prototyping</span>
+                </div>
+              </div>
+            </div>
+            <div class="door-panel" style="--dc:#1e3a52">
+              <div class="door-nameplate">HACKATHON<br>WINNER</div>
+              <div class="door-handle"><div class="door-knob"></div><div class="door-keyhole"></div></div>
+            </div>
+            <div class="door-mask"></div>
+          </div>
+        </div>
+        <div class="door-shadow"></div>
+      </div>
+    </div>
+
+  </div><!-- /doors-row -->
+
+  <!-- Click hint -->
+  <p class="doors-hint" id="doorsHint">SELECT A DOOR TO EXPLORE · TAP AGAIN TO CLOSE</p>
+
+</section>
+
+<!-- ════════════════════════════════════
+     FEATURED PROJECTS — 3D PANEL GALLERY
+════════════════════════════════════ -->
+<section class="projects-section section" id="projects">
+  <div class="wrap">
+    <div class="s-label">02B — Selected Work</div>
+    <div class="projects-heading-row"><h2 class="s-title">Things I've helped bring to life.</h2><p>Choose a panel to explore the idea behind the build.</p></div>
+    <div class="project-accordion" id="projectAccordion">
+      <article class="project-panel project-bcm is-active" tabindex="0" role="button" aria-expanded="true">
+        <span class="project-index">01 / FINTECH</span><span class="project-graphic">BCM</span>
+        <div class="project-info"><span>PLAKSHA HACKATHON PRAYAS · 3RD PRIZE</span><h3>Because Credit Matters</h3><p>An alternative-credit intelligence concept for people with limited traditional credit history. It explores explainable signals such as cash-flow consistency, UPI activity and utility-payment patterns to build a broader picture of creditworthiness.</p><div class="project-detail-line"><span>ALTERNATIVE CREDIT</span><span>EXPLAINABLE UNDERWRITING</span><span>TEAM-LED</span></div></div>
+      </article>
+      <article class="project-panel project-kisan" tabindex="0" role="button" aria-expanded="false">
+        <span class="project-index">02 / AGRITECH</span><span class="project-graphic">KS</span>
+        <div class="project-info"><span>SMART INDIA HACKATHON · KISANSETU</span><h3>KisanSetu</h3><p>A procurement-coordination layer for mandi centres, designed to make queues and counter activity easier to understand. The concept includes rule-based arrival estimates using queue length, counter clearance and delay signals, along with an SMS / IVR flow simulator.</p><div class="project-detail-line"><span>REACT + TYPESCRIPT</span><span>RULE-BASED ETA</span><span>MANDI WORKFLOW</span></div></div>
+      </article>
+      <article class="project-panel project-visi" tabindex="0" role="button" aria-expanded="false">
+        <span class="project-index">03 / HARDWARE</span><span class="project-graphic">VD</span>
+        <div class="project-info"><span>SLIET INVENTIA / TECHNI VATION · 1ST PRIZE</span><h3>VisiDrop</h3><p>A hardware-software prototype built around a microcontroller and sensor-based interaction. The build brought together a TCRT sensor, LEDs and a buzzer, with a focus on translating a physical input into a clear device response.</p><div class="project-detail-line"><span>MICROCONTROLLER</span><span>SENSORS</span><span>PROTOTYPING</span></div></div>
+      </article>
+      <article class="project-panel project-badui" tabindex="0" role="button" aria-expanded="false">
+        <span class="project-index">04 / UI EXPERIMENT</span><span class="project-graphic">BAD</span>
+        <div class="project-info"><span>SSDC HIVEMIND 2026 · WINNER</span><h3>Bad UI</h3><p>An eight-level interaction challenge built around intentionally frustrating interface patterns. The idea was to turn familiar usability mistakes into a playful experience and show how strongly thoughtful interaction design shapes a product.</p><div class="project-detail-line"><span>8 LEVELS</span><span>INTERACTION DESIGN</span><span>WINNING ENTRY</span></div></div>
+      </article>
+    </div>
+    <p class="project-gallery-hint">HOVER, CLICK OR TAP A PANEL TO EXPAND</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SECTION 03 — ABOUT
+════════════════════════════════════ -->
+<section class="s-about section" id="about">
+  <div class="wrap">
+    <div class="s-label">03 — About Me</div>
+    <div class="about-grid about-editorial-grid">
+      <div class="about-text">
+        <h2 class="s-title">Who I Am</h2>
+        <p>First-year B.Tech <strong>Electronics &amp; Communication Engineering</strong> student at <strong>SLIET, Punjab</strong>. I started coding to solve problems I actually care about — from smart farming to AI assistants.</p>
+        <p>I enjoy understanding both the silicon and the screen. Hackathons have helped me learn teamwork, communicate ideas and build prototypes under pressure.</p>
+        <div class="about-tags">
+          <span>SLIET · Punjab</span><span>ECE · 2026–30</span>
+          <span>Open to Internships</span><span>Building in Public</span>
+        </div>
+      </div>
+      <div class="about-showcase" aria-label="Explore profile chapters">
+        <div class="about-showcase-top">
+          <span class="showcase-kicker">A FEW SIDES OF ME</span>
+          <span class="showcase-index" id="aboutSlideIndex">01 / 04</span>
+        </div>
+        <div class="about-slider-viewport" id="aboutSlider" tabindex="0" aria-roledescription="carousel" aria-label="About Kamal">
+          <article class="about-slide is-active" data-slide="0">
+            <span class="about-slide-no">01</span><span class="about-slide-symbol">⌁</span>
+            <p class="about-slide-eyebrow">THE STUDENT</p><h3>Learning the fundamentals.</h3>
+            <p>Studying Electronics &amp; Communication Engineering at SLIET, while building a strong base in programming and engineering.</p>
+            <div class="about-slide-tags"><i>ECE</i><i>SLIET</i><i>2026–30</i></div>
+          </article>
+          <article class="about-slide" data-slide="1">
+            <span class="about-slide-no">02</span><span class="about-slide-symbol">◈</span>
+            <p class="about-slide-eyebrow">THE BUILDER</p><h3>Ideas into working things.</h3>
+            <p>Exploring web experiences, electronics prototypes and products that connect software with the physical world.</p>
+            <div class="about-slide-tags"><i>Web</i><i>ESP8266</i><i>Prototypes</i></div>
+          </article>
+          <article class="about-slide" data-slide="2">
+            <span class="about-slide-no">03</span><span class="about-slide-symbol">✳</span>
+            <p class="about-slide-eyebrow">THE COMPETITOR</p><h3>Learning by showing up.</h3>
+            <p>Taking ideas to hackathons and technical events, collaborating with teams and learning to present under pressure.</p>
+            <div class="about-slide-tags"><i>Hackathons</i><i>Teamwork</i><i>Recognition</i></div>
+          </article>
+          <article class="about-slide" data-slide="3">
+            <span class="about-slide-no">04</span><span class="about-slide-symbol">↗</span>
+            <p class="about-slide-eyebrow">THE EXPLORER</p><h3>Always another thing to learn.</h3>
+            <p>Currently strengthening C++ and DSA while exploring embedded systems, AI tools and better product design.</p>
+            <div class="about-slide-tags"><i>C++</i><i>DSA</i><i>Embedded</i></div>
+          </article>
+        </div>
+        <div class="about-slider-controls">
+          <div class="about-slider-dots" id="aboutSliderDots" aria-label="Choose profile chapter">
+            <button class="is-active" type="button" data-go="0" aria-label="Show student chapter"></button>
+            <button type="button" data-go="1" aria-label="Show builder chapter"></button>
+            <button type="button" data-go="2" aria-label="Show competitor chapter"></button>
+            <button type="button" data-go="3" aria-label="Show explorer chapter"></button>
+          </div>
+          <div class="about-slider-arrows">
+            <button type="button" id="aboutPrev" aria-label="Previous profile chapter">←</button>
+            <button type="button" id="aboutNext" aria-label="Next profile chapter">→</button>
+          </div>
+        </div>
+        <p class="slider-hint">DRAG OR USE THE ARROWS TO EXPLORE</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SECTION 04 — SKILLS
+════════════════════════════════════ -->
+<section class="s-skills section" id="skills">
+  <div class="wrap">
+    <div class="s-label">04 — Technical Arsenal</div>
+    <div class="skills-heading-row"><h2 class="s-title">What I Wield</h2><p>Tools and technologies I'm learning, exploring and using to build.</p></div>
+    <div class="skills-marquee" aria-label="Technologies">
+      <div class="skills-marquee-track"><span>C / C++</span><b>✳</b><span>JavaScript</span><b>✳</b><span>React</span><b>✳</b><span>Arduino</span><b>✳</b><span>ESP8266</span><b>✳</b><span>Python</span><b>✳</b><span>Git</span><b>✳</b><span>Embedded Systems</span><b>✳</b><span>C / C++</span><b>✳</b><span>JavaScript</span><b>✳</b><span>React</span><b>✳</b><span>Arduino</span><b>✳</b><span>ESP8266</span><b>✳</b><span>Python</span><b>✳</b><span>Git</span><b>✳</b><span>Embedded Systems</span><b>✳</b></div>
+    </div>
+    <div class="skills-explorer">
+      <div class="skills-tabs" role="tablist" aria-label="Skill categories">
+        <button class="skill-tab is-active" type="button" role="tab" aria-selected="true" data-skill="programming">Programming <span>01</span></button>
+        <button class="skill-tab" type="button" role="tab" aria-selected="false" data-skill="web">Web <span>02</span></button>
+        <button class="skill-tab" type="button" role="tab" aria-selected="false" data-skill="electronics">Electronics <span>03</span></button>
+        <button class="skill-tab" type="button" role="tab" aria-selected="false" data-skill="tools">Tools <span>04</span></button>
+      </div>
+      <div class="skills-panel" id="skillsPanel" role="tabpanel" aria-live="polite">
+        <div class="skills-panel-heading"><span id="skillsPanelEyebrow">01 / PROGRAMMING</span><span>SELECT A CATEGORY</span></div>
+        <div class="skills-chip-list" id="skillsChipList">
+          <span>C</span><span>C++</span><span>JavaScript</span><span>Python</span>
+        </div>
+        <p class="skills-panel-note" id="skillsPanelNote">Building strong fundamentals through practice and small projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SECTION 05 — WINS
+════════════════════════════════════ -->
+<section class="s-wins section" id="wins">
+  <div class="wrap">
+    <div class="wins-heading-row">
+      <div><div class="s-label">05 — Achievements &amp; Recognition</div><h2 class="s-title">Wins That Matter</h2></div>
+      <div class="wins-controls"><span id="winsCounter">01 — 04</span><button type="button" id="winsPrev" aria-label="Previous achievement">←</button><button type="button" id="winsNext" aria-label="Next achievement">→</button></div>
+    </div>
+    <div class="wins-track-viewport" id="winsViewport" tabindex="0" aria-label="Achievement carousel" aria-roledescription="carousel">
+      <div class="wins-track" id="winsTrack">
+        <article class="win-poster poster-plaksha">
+          <div class="poster-top"><span>KKG / RECOGNITION</span><span>01</span></div><div class="poster-medal">03</div>
+          <div class="poster-bottom"><span class="win-event">PLAKSHA HACKATHON PRAYAS</span><h3>3rd Prize</h3><p>National Level · Because Credit Matters</p><span class="poster-year">2026</span></div>
+        </article>
+        <article class="win-poster poster-hivemind">
+          <div class="poster-top"><span>KKG / RECOGNITION</span><span>02</span></div><div class="poster-medal">✳</div>
+          <div class="poster-bottom"><span class="win-event">SSDC HIVEMIND 2026</span><h3>Bad UI Winner</h3><p>Eight-level intentionally chaotic UX experience</p><span class="poster-year">2026</span></div>
+        </article>
+        <article class="win-poster poster-visidrop">
+          <div class="poster-top"><span>KKG / RECOGNITION</span><span>03</span></div><div class="poster-medal">01</div>
+          <div class="poster-bottom"><span class="win-event">SLIET INVENTIA / TECHNI VATION</span><h3>1st Prize</h3><p>VisiDrop · Hardware-software prototype</p><span class="poster-year">2026</span></div>
+        </article>
+        <article class="win-poster poster-sih">
+          <div class="poster-top"><span>KKG / RECOGNITION</span><span>04</span></div><div class="poster-medal">IN</div>
+          <div class="poster-bottom"><span class="win-event">SMART INDIA HACKATHON</span><h3>KisanSetu</h3><p>Real-time mandi procurement coordination concept</p><span class="poster-year">2026</span></div>
+        </article>
+      </div>
+    </div>
+    <p class="wins-drag-hint">DRAG TO EXPLORE THE COLLECTION <span>↔</span></p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SECTION 06 — JOURNEY
+════════════════════════════════════ -->
+<section class="s-journey section" id="journey">
+  <div class="wrap">
+    <div class="s-label">06 — The Journey So Far</div>
+    <div class="journey-heading-row">
+      <h2 class="s-title">Built one step<br><em>at a time.</em></h2>
+      <p class="journey-intro">A few milestones from my first year — follow the path and open each chapter.</p>
+    </div>
+    <div class="curved-journey" id="curvedJourney">
+      <svg class="journey-path" viewBox="0 0 1200 760" preserveAspectRatio="none" aria-hidden="true">
+        <defs><linearGradient id="journeyMetalGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0e4c8"/><stop offset=".48" stop-color="#aeb4b1"/><stop offset="1" stop-color="#d5b77e"/></linearGradient><filter id="pathGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+        <path class="journey-path-base" d="M80 90 C 330 35, 820 35, 1110 105 C 1190 230, 1190 520, 1100 650 C 820 730, 330 730, 80 650"/>
+        <path class="journey-path-progress" id="journeyPathProgress" d="M80 90 C 330 35, 820 35, 1110 105 C 1190 230, 1190 520, 1100 650 C 820 730, 330 730, 80 650"/>
+      </svg>
+      <div class="journey-node node-1" data-node="0"><span class="node-dot"></span><button class="journey-chapter" type="button" aria-expanded="false"><span class="tl-yr">AUGUST 2026 · CHAPTER 01</span><h3>Started B.Tech ECE at SLIET</h3><p>Moved from Mathura to Longowal and began a new chapter in Electronics &amp; Communication Engineering.</p><span class="chapter-more">OPEN CHAPTER +</span><div class="chapter-extra"><strong>A new environment, a new routine.</strong><p>Stepping onto a large campus, meeting new people and exploring the overlap between electronics, software and design.</p></div></button></div>
+      <div class="journey-node node-2" data-node="1"><span class="node-dot"></span><button class="journey-chapter" type="button" aria-expanded="false"><span class="tl-yr">2026 · CHAPTER 02</span><h3>KisanSetu — SIH project work</h3><p>Worked with a beginner team on a real-time procurement coordination concept for mandi centres.</p><span class="chapter-more">OPEN CHAPTER +</span><div class="chapter-extra"><strong>From a problem statement to a prototype.</strong><p>Explored queue visibility, rule-based ETA logic and farmer-to-mandi coordination.</p></div></button></div>
+      <div class="journey-node node-3" data-node="2"><span class="node-dot"></span><button class="journey-chapter" type="button" aria-expanded="false"><span class="tl-yr">2026 · CHAPTER 03</span><h3>3rd Prize — Plaksha Prayas</h3><p>Led the team behind Because Credit Matters, an alternative-credit intelligence concept.</p><span class="chapter-more">OPEN CHAPTER +</span><div class="chapter-extra"><strong>Because Credit Matters.</strong><p>The project explored explainable ways to represent financial behaviour beyond a traditional credit score. The team secured 3rd place in the Prayas track.</p></div></button></div>
+      <div class="journey-node node-4" data-node="3"><span class="node-dot"></span><button class="journey-chapter" type="button" aria-expanded="false"><span class="tl-yr">10 OCTOBER 2026 · CHAPTER 04</span><h3>Winner — SSDC Hivemind</h3><p>Won the Bad UI competition with an intentionally chaotic user-interface experience.</p><span class="chapter-more">OPEN CHAPTER +</span><div class="chapter-extra"><strong>Bad UI, built with purpose.</strong><p>An eight-level experience that turned frustrating interface patterns into a playful challenge.</p></div></button></div>
+      <div class="journey-node node-5" data-node="4"><span class="node-dot"></span><button class="journey-chapter" type="button" aria-expanded="false"><span class="tl-yr">2026 · CHAPTER 05</span><h3>1st Prize — VisiDrop</h3><p>Led the team that earned first prize at SLIET Inventia / Techni Vation.</p><span class="chapter-more">OPEN CHAPTER +</span><div class="chapter-extra"><strong>Learning by building with hardware.</strong><p>Worked with a microcontroller, sensors, LEDs and a buzzer to bring the prototype together.</p></div></button></div>
+      <div class="journey-node node-6" data-node="5"><span class="node-dot"></span><button class="journey-chapter" type="button" aria-expanded="false"><span class="tl-yr">NOW · CHAPTER 06</span><h3>Learning, experimenting, building</h3><p>Strengthening C++ and DSA while exploring web development, embedded systems and AI tools.</p><span class="chapter-more">OPEN CHAPTER +</span><div class="chapter-extra"><strong>The next chapter is in progress.</strong><p>Current focus: stronger programming fundamentals, better engineering habits and projects that connect the physical and digital worlds.</p></div></button></div>
+    </div>
+    <p class="timeline-footnote">Every milestone is a work in progress — more chapters to come.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SECTION 07 — CONTACT
+════════════════════════════════════ -->
+<section class="s-contact section" id="contact">
+  <div class="wrap">
+    <div class="s-label">07 — Contact</div>
+    <div class="contact-main rev">
+      <h2 class="contact-big">Let's build<br><em>something real.</em></h2>
+      <p class="contact-sub">Open to internships, collaborations, hackathon teams, and interesting problems worth solving.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-links rev">
+        <a href="mailto:kamal@sliet.ac.in" class="ci">
+          <div class="ci-ico">✉</div>
+          <div><span class="ci-lbl">Email</span><span class="ci-val">kamal@sliet.ac.in</span></div>
+          <span class="ci-arr">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/kamal-kant-gautam-2b17073a5" target="_blank" rel="noopener noreferrer" aria-label="Open Kamal Kant Gautam on LinkedIn" class="ci">
+          <div class="ci-ico">in</div>
+          <div><span class="ci-lbl">LinkedIn</span><span class="ci-val">Kamal Kant Gautam</span></div>
+          <span class="ci-arr">↗</span>
+        </a>
+        <a href="https://github.com/kamal-kant-gautam" target="_blank" class="ci">
+          <div class="ci-ico">gh</div>
+          <div><span class="ci-lbl">GitHub</span><span class="ci-val">@kamal-kant-gautam</span></div>
+          <span class="ci-arr">↗</span>
+        </a>
+        <a href="mailto:kamal@sliet.ac.in?subject=Resume%20request" class="ci">
+          <div class="ci-ico">↓</div>
+          <div><span class="ci-lbl">Resume</span><span class="ci-val">Download PDF</span></div>
+          <span class="ci-arr">↓</span>
+        </a>
+      </div>
+      <form class="contact-form rev" id="contactForm">
+        <div class="cf-row">
+          <input type="text" name="name" autocomplete="name" placeholder="Your Name" aria-label="Your name" required/>
+          <input type="email" name="email" autocomplete="email" placeholder="Your Email" aria-label="Your email" required/>
+        </div>
+        <textarea name="message" rows="4" placeholder="What would you like to build together?" aria-label="Your message" required></textarea>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <button type="submit" class="cta-primary cf-btn">Send Message <span class="cta-arrow"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg></span></button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <span class="footer-name">Kamal Kant Gautam</span>
+      <span class="footer-copy">© 2026 · SLIET, Punjab · ECE 2026–30</span>
+      <span class="footer-clock" id="footerClock">IST --:--:--</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
